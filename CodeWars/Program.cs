@@ -15,6 +15,7 @@ namespace CodeWars
             Console.WriteLine(Opposite(-5800));
             Console.WriteLine(BinaryArrayToNumber(new int[] { 0, 0, 0, 1 }));
             Console.WriteLine(СenturyFromYear(1705));
+            Console.WriteLine(OrderedCount("abracadabra"));
         }
 
   
@@ -52,6 +53,15 @@ namespace CodeWars
             return arr2.Where(i => i >= 0 && i < arr1.Length)
               .Select(i => arr1[i])
               .ToArray();
+        }
+
+        public static List<Tuple<char, int>> OrderedCount(string input)
+        {
+            return input
+                .GroupBy(c => c)
+                .Select(g => new Tuple<char, int>(g.Key, g.Count()))
+                .OrderBy(t => input.IndexOf(t.Item1))
+                .ToList();
         }
     } 
 }
