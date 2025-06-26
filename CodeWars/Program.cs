@@ -16,6 +16,7 @@ namespace CodeWars
             Console.WriteLine(BinaryArrayToNumber(new int[] { 0, 0, 0, 1 }));
             Console.WriteLine(СenturyFromYear(1705));
             Console.WriteLine(OrderedCount("abracadabra"));
+            Console.WriteLine(Reverse("Hello World"));
         }
 
   
@@ -63,5 +64,8 @@ namespace CodeWars
                 .OrderBy(t => input.IndexOf(t.Item1))
                 .ToList();
         }
-    } 
+
+        public static string Reverse(string str) => string.Join(" ", str.Split(' ').Select(word => new string(word.Reverse().ToArray())));
+
+    }
 }
