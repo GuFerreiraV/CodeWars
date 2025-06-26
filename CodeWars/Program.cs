@@ -17,6 +17,7 @@ namespace CodeWars
             Console.WriteLine(СenturyFromYear(1705));
             Console.WriteLine(OrderedCount("abracadabra"));
             Console.WriteLine(Reverse("Hello World"));
+            Console.WriteLine(ConvertBits(31, 14));
         }
 
   
@@ -67,5 +68,17 @@ namespace CodeWars
 
         public static string Reverse(string str) => string.Join(" ", str.Split(' ').Select(word => new string(word.Reverse().ToArray())));
 
+        public static int ConvertBits(int a, int b)
+        {
+            int xor = a ^ b;
+            int count = 0;
+
+            while (xor > 0)
+            {
+                count++;
+                xor = xor & (xor - 1);
+            }
+            return count;
+        }
     }
 }
