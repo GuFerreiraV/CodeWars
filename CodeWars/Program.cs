@@ -18,6 +18,8 @@ namespace CodeWars
             Console.WriteLine(OrderedCount("abracadabra"));
             Console.WriteLine(Reverse("Hello World"));
             Console.WriteLine(ConvertBits(31, 14));
+            Console.WriteLine(string.Join(", ", FindAll(new int[] { 1, 2, 3, 2, 1 }, 2)));
+            Console.WriteLine(Interlockable(5, 10)); // verifica se dois números podem ser intercalados
         }
 
   
@@ -79,6 +81,27 @@ namespace CodeWars
                 xor = xor & (xor - 1);
             }
             return count;
+        }
+
+        // Encontrando todos os índices de um número em um array
+        public static int[] FindAll(int[] array, int n)
+        {
+            List<int> Found = new List<int>();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == n)
+                {
+                    Found.Add(i);
+                }
+            }
+            return Found.ToArray();
+        }
+
+        // Check if two unsigned long integers can be interlocked
+        public static bool Interlockable(ulong a, ulong b)
+        {
+            return (a & b) == 0;
         }
     }
 }
