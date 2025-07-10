@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CodeWars
 {
@@ -15,11 +17,16 @@ namespace CodeWars
             Console.WriteLine(Opposite(-5800));
             Console.WriteLine(BinaryArrayToNumber(new int[] { 0, 0, 0, 1 }));
             Console.WriteLine(СenturyFromYear(1705));
-            Console.WriteLine(OrderedCount("abracadabra"));
+            List<Tuple<char, int>> result = OrderedCount("abracadabra");
+            foreach (var item in result)
+            {
+                Console.WriteLine($"Caractere: '{item.Item1}', Contagem: {item.Item2}");
+            }
             Console.WriteLine(Reverse("Hello World"));
             Console.WriteLine(ConvertBits(31, 14));
             Console.WriteLine(string.Join(", ", FindAll(new int[] { 1, 2, 3, 2, 1 }, 2)));
             Console.WriteLine(Interlockable(5, 10)); // verifica se dois números podem ser intercalados
+            Console.WriteLine(solve("3+4*2-1")); // Reverte a equação
         }
 
   
@@ -102,6 +109,24 @@ namespace CodeWars
         public static bool Interlockable(ulong a, ulong b)
         {
             return (a & b) == 0;
+        }
+
+        public static string solve(string eq)
+        {
+
+            string pattern = @"(\d+)|([a-zA-Z])|([*/+-])";
+
+            MatchCollection matches = Regex.Matches(eq, pattern);
+            List<string> tokens = new List<string>();
+
+            foreach (Match match in matches)
+            {
+                tokens.Add(match.Value);
+            }
+
+            tokens.Reverse();
+
+            return string.Join("", tokens);
         }
     }
 }
