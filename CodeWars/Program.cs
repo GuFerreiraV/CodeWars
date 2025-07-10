@@ -27,15 +27,14 @@ namespace CodeWars
             Console.WriteLine(string.Join(", ", FindAll(new int[] { 1, 2, 3, 2, 1 }, 2)));
             Console.WriteLine(Interlockable(5, 10)); // verifica se dois números podem ser intercalados
             Console.WriteLine(solve("3+4*2-1")); // Reverte a equação
+            Console.WriteLine(CoffeeLimits(2004, 3, 28)); // Limites de café e descafeinado
         }
 
   
-            public static string Disemvowel(string str)
+        public static string Disemvowel(string str)
             {
                 return new string(str.Where(c => !"aeiouAEIOU".Contains(c)).ToArray());
             }
-        
-
  
         public static int DescendingOrder(int num)
         {
@@ -127,6 +126,44 @@ namespace CodeWars
             tokens.Reverse();
 
             return string.Join("", tokens);
+        }
+
+        public static (int, int) CoffeeLimits(int year, int month, int day)
+        {
+
+            const int cafe = 0xCAFE;
+            const int decaf = 0xDECAF;
+
+            // 20040328
+            string birth = $"{year}{month:D2}{day:D2}";
+            long health = long.Parse(birth);
+
+            int regularLimit = 0;
+            int decafLimit = 0;
+
+            long test = health;
+            for (int cups = 1; cups <= 5000; cups++)
+            {
+                test += cafe;
+                if (test.ToString("X").Contains("DEAD"))
+                {
+                    regularLimit = cups;
+                    break;
+                }
+            }
+
+            long test1 = health;
+            for (int cups = 1; cups <= 5000; cups++)
+            {
+                test1 += decaf;
+                if (test1.ToString("X").Contains("DEAD"))
+                {
+                    decafLimit = cups;
+                    break;
+                }
+            }
+
+            return (regularLimit, decafLimit);
         }
     }
 }
