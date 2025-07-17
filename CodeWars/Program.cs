@@ -28,9 +28,10 @@ namespace CodeWars
             Console.WriteLine(Interlockable(5, 10)); // verifica se dois números podem ser intercalados
             Console.WriteLine(solve("3+4*2-1")); // Reverte a equação
             Console.WriteLine(CoffeeLimits(2004, 3, 28)); // Limites de café e descafeinado
+            Console.WriteLine(string.Join(", ", Rotate(new object[] { 1, 2, 3, 4, 5 }, 2))); // Rotaciona um array
         }
 
-  
+
         public static string Disemvowel(string str)
             {
                 return new string(str.Where(c => !"aeiouAEIOU".Contains(c)).ToArray());
@@ -46,7 +47,6 @@ namespace CodeWars
 
             return int.Parse(orderNumbers);
         }
-
 
         public static int Opposite(int number) => -number;
 
@@ -164,6 +164,31 @@ namespace CodeWars
             }
 
             return (regularLimit, decafLimit);
+        }
+
+        public static object[] Rotate(object[] array, int n)
+        {
+            int length = array.Length;
+            int rotation = n % length;
+
+            if (rotation == 0)
+            {
+                return (object[])array.Clone();
+            }
+            ;
+            if (rotation < 0)
+            {
+                rotation += length;
+            }
+            if (array == null || array.Length <= 1)
+            {
+                return array;
+            }
+            int cort = length - rotation;
+            var final = array.Skip(cort);
+            var inicial = array.Take(cort);
+
+            return final.Concat(inicial).ToArray();
         }
     }
 }
