@@ -1,194 +1,149 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CodeWars
 {
     internal class Program
     {
-
-        public static void Main(string[] args) {
-            Console.WriteLine(Disemvowel("This website is for losers LOL!"));
-            Console.WriteLine(sorting_number_descending.DescendingOrder(345343));
-            Console.WriteLine(Opposite(-5800));
-            Console.WriteLine(BinaryArrayToNumber(new int[] { 0, 0, 0, 1 }));
-            Console.WriteLine(СenturyFromYear(1705));
-            List<Tuple<char, int>> result = OrderedCount("abracadabra");
-            foreach (var item in result)
+        public static void Main (string[] args)
+        {
+            while (true)
             {
-                Console.WriteLine($"Caractere: '{item.Item1}', Contagem: {item.Item2}");
-            }
-            Console.WriteLine(Reverse("Hello World"));
-            Console.WriteLine(ConvertBits(31, 14));
-            Console.WriteLine(string.Join(", ", FindAll(new int[] { 1, 2, 3, 2, 1 }, 2)));
-            Console.WriteLine(Interlockable(5, 10)); // verifica se dois números podem ser intercalados
-            Console.WriteLine(solve("3+4*2-1")); // Reverte a equação
-            Console.WriteLine(CoffeeLimits(2004, 3, 28)); // Limites de café e descafeinado
-            Console.WriteLine(string.Join(", ", Rotate(new object[] { 1, 2, 3, 4, 5 }, 2))); // Rotaciona um array
-        }
+                Console.Clear();
+                Console.WriteLine("Selecione um desafio do CodeWars para executar:");
+                Console.WriteLine("-------------------------------------------------");
+                Console.WriteLine(" 1. Disemvowel");
+                Console.WriteLine(" 2. Descending Order");
+                Console.WriteLine(" 3. Opposite Number");
+                Console.WriteLine(" 4. Binary Array To Number");
+                Console.WriteLine(" 5. Century From Year");
+                Console.WriteLine(" 6. Ordered Count of Characters");
+                Console.WriteLine(" 7. Reverse Words");
+                Console.WriteLine(" 8. Delta Bits (ConvertBits)");
+                Console.WriteLine(" 9. Find All Occurrences of a Number");
+                Console.WriteLine("10. Interlocking Binary Pairs");
+                Console.WriteLine("11. Equation Reversal");
+                Console.WriteLine("12. Death By Coffee");
+                Console.WriteLine("13. Rotate Array");
+                Console.WriteLine("14. Sum of Numbers");
+                Console.WriteLine("15. Find Smallest Int");
+                Console.WriteLine("16. Find Array by Index");
+                Console.WriteLine("17. Pangram");
+                Console.WriteLine("-------------------------------------------------");
+                Console.WriteLine(" 0. Sair");
+                Console.WriteLine("-------------------------------------------------");
+
+                Console.Write("\nDigite sua escolha: ");
+                string choice = Console.ReadLine();
+
+                Console.WriteLine();
 
 
-        public static string Disemvowel(string str)
-            {
-                return new string(str.Where(c => !"aeiouAEIOU".Contains(c)).ToArray());
-            }
- 
-        public static int DescendingOrder(int num)
-        {
-            var orderNumbers = new string(num
-                .ToString() // Converte int p/ string
-                .OrderByDescending(n => n) // Ordena de forma decrescente
-                .ToArray()
-                );
-
-            return int.Parse(orderNumbers);
-        }
-
-        public static int Opposite(int number) => -number;
-
-        public static int GetSum(int a, int b) => Enumerable.Range(Math.Min(a,b), Math.Max(b, a)-Math.Min(a, b)+1).Sum();
-
-        public static int BinaryArrayToNumber(int[] BinaryArray) => BinaryArray.Aggregate(0, (acc, bit) => (acc << 1) | bit);
-
-        public static int СenturyFromYear(int year) => (int)Math.Ceiling((double)year / 100);
-
-        public static int FindSmallestInt(int[] args) => args.OrderBy(n => n).First();
-
-        public static object[] FindArray(object[] arr1, int[] arr2)
-        {
-            return arr2.Where(i => i >= 0 && i < arr1.Length)
-              .Select(i => arr1[i])
-              .ToArray();
-        }
-
-        public static List<Tuple<char, int>> OrderedCount(string input)
-        {
-            return input
-                .GroupBy(c => c)
-                .Select(g => new Tuple<char, int>(g.Key, g.Count()))
-                .OrderBy(t => input.IndexOf(t.Item1))
-                .ToList();
-        }
-
-        public static string Reverse(string str) => string.Join(" ", str.Split(' ').Select(word => new string(word.Reverse().ToArray())));
-
-        public static int ConvertBits(int a, int b)
-        {
-            int xor = a ^ b;
-            int count = 0;
-
-            while (xor > 0)
-            {
-                count++;
-                xor = xor & (xor - 1);
-            }
-            return count;
-        }
-
-        // Encontrando todos os índices de um número em um array
-        public static int[] FindAll(int[] array, int n)
-        {
-            List<int> Found = new List<int>();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == n)
+                switch (choice)
                 {
-                    Found.Add(i);
+                    case "1":
+                        Console.WriteLine("Executando: Disemvowel");
+                        Console.WriteLine("Input: \"This website is for losers LOL!\"");
+                        Console.WriteLine($"Resultado: {remove_vowels.Disemvowel("This website is for losers LOL!")}");
+                        break;
+                    case "2":
+                        Console.WriteLine("Executando: Descending Order");
+                        Console.WriteLine("Input: 345343");
+                        Console.WriteLine($"Resultado: {sorting_number_descending.DescendingOrder(345343)}");
+                        break;
+                    case "3":
+                        Console.WriteLine("Executando: Opposite Number");
+                        Console.WriteLine("Input: -5800");
+                        Console.WriteLine($"Resultado: {opposite_number.Opposite(-5800)}");
+                        break;
+                    case "4":
+                        Console.WriteLine("Executando: Binary Array To Number");
+                        Console.WriteLine("Input: new int[] { 0, 0, 0, 1 }");
+                        Console.WriteLine($"Resultado: {Kata.binaryArrayToNumber(new int[] { 0, 0, 0, 1 })}");
+                        break;
+                    case "5":
+                        Console.WriteLine("Executando: Century From Year");
+                        Console.WriteLine("Input: 1705");
+                        Console.WriteLine($"Resultado: {CenturyFromYear.СenturyFromYear(1705)}");
+                        break;
+                    case "6":
+                        Console.WriteLine("Executando: Ordered Count of Characters");
+                        Console.WriteLine("Input: \"abracadabra\"");
+                        List<Tuple<char, int>> result = OrderedCountofCharacters.OrderedCount("abracadabra");
+                        Console.WriteLine("Resultado:");
+                        foreach (var item in result)
+                        {
+                            Console.WriteLine($"  Caractere: '{item.Item1}', Contagem: {item.Item2}");
+                        }
+                        break;
+                    case "7":
+                        Console.WriteLine("Executando: Reverse Words");
+                        Console.WriteLine("Input: \"Hello World\"");
+                        Console.WriteLine($"Resultado: {ReverseWords.Reverse("Hello World")}");
+                        break;
+                    case "8":
+                        Console.WriteLine("Executando: Delta Bits");
+                        Console.WriteLine("Input: 31, 14");
+                        Console.WriteLine($"Resultado: {DeltaBits.ConvertBits(31, 14)}");
+                        break;
+                    case "9":
+                        Console.WriteLine("Executando: Find All Occurrences");
+                        Console.WriteLine("Input: new int[] { 1, 2, 3, 2, 1 }, 2");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", CheckAllValuesInTheArray.FindAll(new int[] { 1, 2, 3, 2, 1 }, 2))}]");
+                        break;
+                    case "10":
+                        Console.WriteLine("Executando: Interlocking Binary Pairs");
+                        Console.WriteLine("Input: 5, 10");
+                        Console.WriteLine($"Resultado: {InterlockingBinaryPairs.Interlockable(5, 10)}");
+                        break;
+                    case "11":
+                        Console.WriteLine("Executando: Equation Reversal");
+                        Console.WriteLine("Input: \"3+4*2-1\"");
+                        Console.WriteLine($"Resultado: {EquationReversal.solve("3+4*2-1")}");
+                        break;
+                    case "12":
+                        Console.WriteLine("Executando: Death By Coffee");
+                        Console.WriteLine("Input: 2004, 3, 28");
+                        var coffeeLimits = DeathByCoffee.CoffeeLimits(2004, 3, 28);
+                        Console.WriteLine($"Resultado: (Regular: {coffeeLimits.Item1}, Decaf: {coffeeLimits.Item2})");
+                        break;
+                    case "13":
+                        Console.WriteLine("Executando: Rotate Array");
+                        Console.WriteLine("Input: new object[] { 1, 2, 3, 4, 5 }, 2");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", RotateArray.Rotate(new object[] { 1, 2, 3, 4, 5 }, 2))}]");
+                        break;
+                    case "14":
+                        Console.WriteLine("Executando: Sum of Numbers");
+                        Console.WriteLine("Input: 5, -1");
+                        Console.WriteLine($"Resultado: {sumOfNumbers.GetSum(5, -1)}");
+                        break;
+                    case "15":
+                        Console.WriteLine("Executando: Find Smallest Int");
+                        Console.WriteLine("Input: new int[] { 78, 56, 232, 12, 18 }");
+                        Console.WriteLine($"Resultado: {FindSmallestInt.FindSmallestInteger(new int[] { 78, 56, 232, 12, 18 })}");
+                        break;
+                    case "16":
+                        Console.WriteLine("Executando: Find Array by Index");
+                        Console.WriteLine("Input: new object[]{{1, 2, 3, 4, 5}}, new int[]{{0, 2}}");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", FindArray.FindArrayI(new object[] { 1, 2, 3, 4, 5 }, new int[] { 0, 2 }))}]");
+                        break;
+                    case "17":
+                        Console.WriteLine("Executando: Pangram");
+                        Console.WriteLine("Input: \"The quick brown fox jumps over the lazy dog\"");
+                        Console.WriteLine($"Resultado: {Pangram.IsPangram("The quick brown fox jumps over the lazy dog")}");
+                        break;
+                    case "0":
+                        Console.WriteLine("Saindo...");
+                        return;
+                    default:
+                        Console.WriteLine("Escolha inválida. Tente novamente.");
+                        break;
                 }
+
+                Console.WriteLine("\n\nPressione qualquer tecla para voltar ao menu...");
+                Console.ReadKey();
             }
-            return Found.ToArray();
-        }
-
-        // Check if two unsigned long integers can be interlocked
-        public static bool Interlockable(ulong a, ulong b)
-        {
-            return (a & b) == 0;
-        }
-
-        public static string solve(string eq)
-        {
-
-            string pattern = @"(\d+)|([a-zA-Z])|([*/+-])";
-
-            MatchCollection matches = Regex.Matches(eq, pattern);
-            List<string> tokens = new List<string>();
-
-            foreach (Match match in matches)
-            {
-                tokens.Add(match.Value);
-            }
-
-            tokens.Reverse();
-
-            return string.Join("", tokens);
-        }
-
-        public static (int, int) CoffeeLimits(int year, int month, int day)
-        {
-
-            const int cafe = 0xCAFE;
-            const int decaf = 0xDECAF;
-
-            // 20040328
-            string birth = $"{year}{month:D2}{day:D2}";
-            long health = long.Parse(birth);
-
-            int regularLimit = 0;
-            int decafLimit = 0;
-
-            long test = health;
-            for (int cups = 1; cups <= 5000; cups++)
-            {
-                test += cafe;
-                if (test.ToString("X").Contains("DEAD"))
-                {
-                    regularLimit = cups;
-                    break;
-                }
-            }
-
-            long test1 = health;
-            for (int cups = 1; cups <= 5000; cups++)
-            {
-                test1 += decaf;
-                if (test1.ToString("X").Contains("DEAD"))
-                {
-                    decafLimit = cups;
-                    break;
-                }
-            }
-
-            return (regularLimit, decafLimit);
-        }
-
-        public static object[] Rotate(object[] array, int n)
-        {
-            int length = array.Length;
-            int rotation = n % length;
-
-            if (rotation == 0)
-            {
-                return (object[])array.Clone();
-            }
-            ;
-            if (rotation < 0)
-            {
-                rotation += length;
-            }
-            if (array == null || array.Length <= 1)
-            {
-                return array;
-            }
-            int cort = length - rotation;
-            var final = array.Skip(cort);
-            var inicial = array.Take(cort);
-
-            return final.Concat(inicial).ToArray();
         }
     }
 }
