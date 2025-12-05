@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11206.111 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars", "CodeWars\CodeWars.csproj", "{F33D34A7-D5AF-4FE4-9E39-0932C6E8EA9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PangramDetect", "PangramDetect\PangramDetect.csproj", "{18BDEF91-0E03-4F8D-B57C-5990F4CEB9FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F33D34A7-D5AF-4FE4-9E39-0932C6E8EA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F33D34A7-D5AF-4FE4-9E39-0932C6E8EA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33D34A7-D5AF-4FE4-9E39-0932C6E8EA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BDEF91-0E03-4F8D-B57C-5990F4CEB9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BDEF91-0E03-4F8D-B57C-5990F4CEB9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BDEF91-0E03-4F8D-B57C-5990F4CEB9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BDEF91-0E03-4F8D-B57C-5990F4CEB9FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
