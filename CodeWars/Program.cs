@@ -30,6 +30,9 @@ namespace CodeWars
                 Console.WriteLine("15. Find Smallest Int");
                 Console.WriteLine("16. Find Array by Index");
                 Console.WriteLine("17. Pangram");
+                Console.WriteLine("18. Delete Nth");
+                Console.WriteLine("19. Counting Sheeps");
+                Console.WriteLine("20. Growth of a Population");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -132,6 +135,21 @@ namespace CodeWars
                         Console.WriteLine("Executando: Pangram");
                         Console.WriteLine("Input: \"The quick brown fox jumps over the lazy dog\"");
                         Console.WriteLine($"Resultado: {Pangram.IsPangram("The quick brown fox jumps over the lazy dog")}");
+                        break;
+                    case "18":
+                        Console.WriteLine("Executando: DeleteN");
+                        Console.WriteLine("Input: [1,2,3,1,2,1,2,3] ");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", DeleteNth.DeleteN(new int[] { 1, 2, 3, 1, 2, 1, 2}, 2))}]");
+                        break;
+                    case "19":
+                        Console.WriteLine("Executando: Counting Sheeps");
+                        Console.WriteLine("Input: [false, true, false, false, true] ");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", CountingSheeps.CountSheeps(new bool[] { false, true, false, false, true }))}]");
+                        break;
+                    case "20":
+                        Console.WriteLine("Executando: Growth Population");
+                        Console.WriteLine("Input: [1500, 5, 100, 5000] ");
+                        Console.WriteLine($"Anos: { GrowthPopulation.NbYear(1500, 5, 100, 5000)}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
