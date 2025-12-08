@@ -33,6 +33,7 @@ namespace CodeWars
                 Console.WriteLine("18. Delete Nth");
                 Console.WriteLine("19. Counting Sheeps");
                 Console.WriteLine("20. Growth of a Population");
+                Console.WriteLine("21. Rock, Paper, Scissors");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -150,6 +151,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Growth Population");
                         Console.WriteLine("Input: [1500, 5, 100, 5000] ");
                         Console.WriteLine($"Anos: { GrowthPopulation.NbYear(1500, 5, 100, 5000)}");
+                        break;
+                    case "21":
+                        Console.WriteLine("Executando: RockPaperScissors");
+                        Console.WriteLine("Input: [p1: paper, p2: rock] ");
+                        Console.WriteLine($"Resultado: {RockPaperScissors.Rps("paper", "rock")}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
