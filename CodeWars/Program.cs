@@ -35,7 +35,7 @@ namespace CodeWars
                 Console.WriteLine("20. Growth of a Population");
                 Console.WriteLine("21. Rock, Paper, Scissors");
                 Console.WriteLine("22. Divisible By ...");
-                Console.WriteLine("23. Counting Duplicates");
+                Console.WriteLine("23. Counting Duplicates.");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
