@@ -32,7 +32,7 @@ namespace CodeWars
                 Console.WriteLine("17. Pangram");
                 Console.WriteLine("18. Delete Nth");
                 Console.WriteLine("19. Counting Sheeps");
-                Console.WriteLine("20. Growth of a Population");
+                Console.WriteLine("20. Growth of a Population.");
                 Console.WriteLine("21. Rock, Paper, Scissors");
                 Console.WriteLine("22. Divisible By ..");
                 Console.WriteLine("23. Counting Duplicates.");
