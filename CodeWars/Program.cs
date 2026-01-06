@@ -34,6 +34,8 @@ namespace CodeWars
                 Console.WriteLine("19. Counting Sheeps");
                 Console.WriteLine("20. Growth of a Population");
                 Console.WriteLine("21. Rock, Paper, Scissors");
+                Console.WriteLine("22. Divisible By ...");
+                Console.WriteLine("23. Counting Duplicates");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -156,6 +158,16 @@ namespace CodeWars
                         Console.WriteLine("Executando: RockPaperScissors");
                         Console.WriteLine("Input: [p1: paper, p2: rock] ");
                         Console.WriteLine($"Resultado: {RockPaperScissors.Rps("paper", "rock")}");
+                        break;
+                    case "22":
+                        Console.WriteLine("Executando: IsDivisibleBy");
+                        Console.WriteLine("Input: (100,5,4,10,25,20)");
+                        Console.WriteLine($"Resultado: {IsDivisibleBy.IsDivisible(100, 5, 4, 10, 25, 20)}");
+                        break;
+                    case "23":
+                        Console.WriteLine("Executando: CountingDuplicates");
+                        Console.WriteLine("Input: (ABBCcAD)");
+                        Console.WriteLine($"Resultado: {CountingDuplicates.DuplicateCount("ABBCcAD")}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
