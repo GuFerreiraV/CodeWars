@@ -37,6 +37,7 @@ namespace CodeWars
                 Console.WriteLine("22. Divisible By ..");
                 Console.WriteLine("23. Counting Duplicates.");
                 Console.WriteLine("24. Word a10n (abbreviation) - 6 kyu - O(n).");
+                Console.WriteLine("25. Find an area - 6 kyu - O(n)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -174,6 +175,17 @@ namespace CodeWars
                         Console.WriteLine("Executando: Word a10n");
                         Console.WriteLine("Input: (Elephant-rides are really funny )");
                         Console.WriteLine($"Resultado: {WordA10n.Abbreviate("Elephant-rides are really funny")}");
+                        break;
+                    case "25":
+                        Console.WriteLine("Executando: Find an area");
+                        Console.WriteLine("Input: ([-2, 1], [1, 4], [3, 2], [5, 6])");
+                        Console.WriteLine($"Resultado: {FindAnArea.FindArea(new List<Point> 
+                        { 
+                            new Point(-2, 1), 
+                            new Point(1, 4), 
+                            new Point(3, 2), 
+                            new Point(5, 6),
+                        })}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
