@@ -36,6 +36,7 @@ namespace CodeWars
                 Console.WriteLine("21. Rock, Paper, Scissors");
                 Console.WriteLine("22. Divisible By ..");
                 Console.WriteLine("23. Counting Duplicates.");
+                Console.WriteLine("24. Word a10n (abbreviation) - 6 kyu - O(n).");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -168,6 +169,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: CountingDuplicates");
                         Console.WriteLine("Input: (ABBCcAD)");
                         Console.WriteLine($"Resultado: {CountingDuplicates.DuplicateCount("ABBCcAD")}");
+                        break;
+                    case "24":
+                        Console.WriteLine("Executando: Word a10n");
+                        Console.WriteLine("Input: (Elephant-rides are really funny )");
+                        Console.WriteLine($"Resultado: {WordA10n.Abbreviate("Elephant-rides are really funny")}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
