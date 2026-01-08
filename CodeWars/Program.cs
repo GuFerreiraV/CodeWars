@@ -38,6 +38,7 @@ namespace CodeWars
                 Console.WriteLine("23. Counting Duplicates.");
                 Console.WriteLine("24. Word a10n (abbreviation) - 6 kyu - O(n).");
                 Console.WriteLine("25. Find an area - 6 kyu - O(n)");
+                Console.WriteLine("26. OnlineRPG - 8 kyu - O(1)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -186,6 +187,11 @@ namespace CodeWars
                             new Point(3, 2), 
                             new Point(5, 6),
                         })}");
+                        break;
+                    case "26":
+                        Console.WriteLine("Executando: OnlineRPG");
+                        Console.WriteLine("Input: (100)");
+                        Console.WriteLine($"Resultado: {OnlineRPG.PlayerRankUp(100)}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
