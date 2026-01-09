@@ -19,10 +19,9 @@ namespace CodeWars
 {
     public class PersistentBugger
     {
-        public static int Persistence (long n)
+        public static int Persistence (long n) // 999
         {
-            if (n < 10) return 0;
-            
+            if (n < 10) return 0;             
             long r = 1;
             
             while(n > 0)
