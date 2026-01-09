@@ -40,6 +40,7 @@ namespace CodeWars
                 Console.WriteLine("25. Find an area - 6 kyu - O(n)");
                 Console.WriteLine("26. OnlineRPG - 8 kyu - O(1)");
                 Console.WriteLine("27. FindTheMine - 6 kyu - O(N²)");
+                Console.WriteLine("28. Persistent Bugger - 6 kyu - O(logn*log(logn))");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -203,6 +204,11 @@ namespace CodeWars
                             { 0, 0, 1 },
                             { 0, 0, 0 }
                         })}");
+                        break;
+                    case "28":
+                        Console.WriteLine("Executando: Persistent Bugger ");
+                        Console.WriteLine("Input: (999)");
+                        Console.WriteLine($"Resultado: {PersistentBugger.Persistence(999)}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
