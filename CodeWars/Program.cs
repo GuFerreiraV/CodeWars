@@ -39,6 +39,7 @@ namespace CodeWars
                 Console.WriteLine("24. Word a10n (abbreviation) - 6 kyu - O(n).");
                 Console.WriteLine("25. Find an area - 6 kyu - O(n)");
                 Console.WriteLine("26. OnlineRPG - 8 kyu - O(1)");
+                Console.WriteLine("27. FindTheMine - 6 kyu - O(N²)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -192,6 +193,16 @@ namespace CodeWars
                         Console.WriteLine("Executando: OnlineRPG");
                         Console.WriteLine("Input: (100)");
                         Console.WriteLine($"Resultado: {OnlineRPG.PlayerRankUp(100)}");
+                        break;
+                    case "27":
+                        Console.WriteLine("Executando: FindTheMine");
+                        Console.WriteLine("Input: [0,0,0],[0,0,1],[0,0,0]");
+                        Console.WriteLine($"Resultado: {FindTheMine.MineLocation(new int[,] 
+                        { 
+                            { 0, 0, 0 },
+                            { 0, 0, 1 },
+                            { 0, 0, 0 }
+                        })}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
