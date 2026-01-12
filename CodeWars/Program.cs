@@ -42,6 +42,8 @@ namespace CodeWars
                 Console.WriteLine("27. FindTheMine - 6 kyu - O(N²)");
                 Console.WriteLine("28. Persistent Bugger - 6 kyu - O(logn*log(logn))");
                 Console.WriteLine("29. Find the odd int - 6 kyu - O(n)");
+                Console.WriteLine("30. Take a Ten Minutes Walk - 6 kyu - O(1)");
+                Console.WriteLine("31. Which are in - 6 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -215,6 +217,16 @@ namespace CodeWars
                         Console.WriteLine("Executando: Find The Odd Int");
                         Console.WriteLine("Input: new int[] { 7, 1, 2, 2, 1 }");
                         Console.WriteLine($"Resultado: [{string.Join(", ", FindTheOddInt.find_it(new int[] { 7, 1, 2, 2, 1 }))}]");
+                        break;
+                    case "30":
+                        Console.WriteLine("Executando: Take a Ten Minutes Walk");
+                        Console.WriteLine("Input: new string[] {\"n\",\"s\",\"n\",\"s\",\"w\",\"e\",\"w\",\"e\",\"n\",\"s\"}");
+                        Console.WriteLine($"Resultado: [{TakeATenMinutesWalk.IsValidWalk(new string[] {"n", "s","n", "s", "w", "e","w", "e", "n","s"})}]");
+                        break;
+                    case "31":
+                        Console.WriteLine("Executando: Which Are In");
+                        Console.WriteLine("Input: new string[] {a1 = \"arp\", \"live\", \"strong\"}, new string[] {a2 = \"lively\", \"alive\", \"harp\", \"sharp\", \"armstrong\"}");
+                        Console.WriteLine($"Resultado: [{WhichAreIn.inArray(new string[] { "arp", "live", "strong" }, new string[] {"lively", "alive", "harp", "sharp", "armstrong"})}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
