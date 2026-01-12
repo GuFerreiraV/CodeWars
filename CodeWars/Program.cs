@@ -41,6 +41,7 @@ namespace CodeWars
                 Console.WriteLine("26. OnlineRPG - 8 kyu - O(1)");
                 Console.WriteLine("27. FindTheMine - 6 kyu - O(N²)");
                 Console.WriteLine("28. Persistent Bugger - 6 kyu - O(logn*log(logn))");
+                Console.WriteLine("29. Find the odd int - 6 kyu - O(n)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -209,6 +210,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Persistent Bugger ");
                         Console.WriteLine("Input: (999)");
                         Console.WriteLine($"Resultado: {PersistentBugger.Persistence(999)}");
+                        break;
+                    case "29":
+                        Console.WriteLine("Executando: Find The Odd Int");
+                        Console.WriteLine("Input: new int[] { 7, 1, 2, 2, 1 }");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", FindTheOddInt.find_it(new int[] { 7, 1, 2, 2, 1 }))}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
