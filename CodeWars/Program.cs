@@ -44,6 +44,8 @@ namespace CodeWars
                 Console.WriteLine("29. Find the odd int - 6 kyu - O(n)");
                 Console.WriteLine("30. Take a Ten Minutes Walk - 6 kyu - O(1)");
                 Console.WriteLine("31. Which are in - 6 kyu - O(N)");
+                Console.WriteLine("32. Not Very Secure - 5 kyu - O(N)");
+                Console.WriteLine("33. Pure Odd Digits Prime - 6 kyu - O(n * sqrt(n)) | Pure function O(sqrt(m))");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -227,6 +229,16 @@ namespace CodeWars
                         Console.WriteLine("Executando: Which Are In");
                         Console.WriteLine("Input: new string[] {a1 = \"arp\", \"live\", \"strong\"}, new string[] {a2 = \"lively\", \"alive\", \"harp\", \"sharp\", \"armstrong\"}");
                         Console.WriteLine($"Resultado: [{WhichAreIn.inArray(new string[] { "arp", "live", "strong" }, new string[] {"lively", "alive", "harp", "sharp", "armstrong"})}]");
+                        break;
+                    case "32":
+                        Console.WriteLine("Executando: Not Very Secure");
+                        Console.WriteLine("Input: PassWord");
+                        Console.WriteLine($"Resultado: [{NotVerySecure.Alphanumeric("PassWord")}]");
+                        break;
+                    case "33":
+                        Console.WriteLine("Executando: Pure Odd Digits Prime");
+                        Console.WriteLine("Input: 40");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", PureOddDigitsPrimes.OnlyOddDigPrimes(40))}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
