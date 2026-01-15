@@ -46,6 +46,7 @@ namespace CodeWars
                 Console.WriteLine("31. Which are in - 6 kyu - O(N)");
                 Console.WriteLine("32. Not Very Secure - 5 kyu - O(N)");
                 Console.WriteLine("33. Pure Odd Digits Prime - 6 kyu - O(n * sqrt(n)) | Pure function O(sqrt(m))");
+                Console.WriteLine("34. Convert PascalCase string into snake_case - 5 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -239,6 +240,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Pure Odd Digits Prime");
                         Console.WriteLine("Input: 40");
                         Console.WriteLine($"Resultado: [{string.Join(", ", PureOddDigitsPrimes.OnlyOddDigPrimes(40))}]");
+                        break;
+                    case "34":
+                        Console.WriteLine("Executando: Convert Pascal Case");
+                        Console.WriteLine("Input: IssoEPascal4Case");
+                        Console.WriteLine($"Resultado: [{ConvertPascalCase.ToUnderscore("IssoEPascal4Case")}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
