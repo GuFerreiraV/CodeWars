@@ -47,6 +47,7 @@ namespace CodeWars
                 Console.WriteLine("32. Not Very Secure - 5 kyu - O(N)");
                 Console.WriteLine("33. Pure Odd Digits Prime - 6 kyu - O(n * sqrt(n)) | Pure function O(sqrt(m))");
                 Console.WriteLine("34. Convert PascalCase string into snake_case - 5 kyu - O(N)");
+                Console.WriteLine("35. Conway's Look and Say - 5 kyu - O(N²)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -245,6 +246,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Convert Pascal Case");
                         Console.WriteLine("Input: IssoEPascal4Case");
                         Console.WriteLine($"Resultado: [{ConvertPascalCase.ToUnderscore("IssoEPascal4Case")}]");
+                        break;
+                    case "35":
+                        Console.WriteLine("Executando: Conway's Look and Say");
+                        Console.WriteLine("Input: 2");
+                        Console.WriteLine($"Resultado: [{ConwayLookSay.LookSay(2)}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
