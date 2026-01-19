@@ -49,6 +49,7 @@ namespace CodeWars
                 Console.WriteLine("34. Convert PascalCase string into snake_case - 5 kyu - O(N)");
                 Console.WriteLine("35. Conway's Look and Say - 5 kyu - O(N²)");
                 Console.WriteLine("36. First Non Repeating Char - 5 kyu - O(n*m)");
+                Console.WriteLine("37. Categorize New Member - 7 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -257,6 +258,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Fisrt Non Repeating Char");
                         Console.WriteLine("Input: Sass");
                         Console.WriteLine($"Resultado: [{FIrstNonRepeatingChar.FirstNonRepeatingLetter("Sass")}]");
+                        break;
+                    case "37":
+                        Console.WriteLine("Executando: Categorize New Member");
+                        Console.WriteLine("Input: [60, 10], [20, 3], [50, 8]");
+                        Console.WriteLine($"Resultado: [{string.Join(", ", CategorizeNewMember.OpenOrSenior(new int[][] { [60, 10], [20, 3], [50, 8] }))}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
