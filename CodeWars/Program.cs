@@ -48,6 +48,7 @@ namespace CodeWars
                 Console.WriteLine("33. Pure Odd Digits Prime - 6 kyu - O(n * sqrt(n)) | Pure function O(sqrt(m))");
                 Console.WriteLine("34. Convert PascalCase string into snake_case - 5 kyu - O(N)");
                 Console.WriteLine("35. Conway's Look and Say - 5 kyu - O(N²)");
+                Console.WriteLine("36. First Non Repeating Char - 5 kyu - O(n*m)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -251,6 +252,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Conway's Look and Say");
                         Console.WriteLine("Input: 2");
                         Console.WriteLine($"Resultado: [{ConwayLookSay.LookSay(2)}]");
+                        break;
+                    case "36":
+                        Console.WriteLine("Executando: Fisrt Non Repeating Char");
+                        Console.WriteLine("Input: Sass");
+                        Console.WriteLine($"Resultado: [{FIrstNonRepeatingChar.FirstNonRepeatingLetter("Sass")}]");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
