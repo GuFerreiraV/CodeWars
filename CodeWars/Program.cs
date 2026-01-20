@@ -51,6 +51,7 @@ namespace CodeWars
                 Console.WriteLine("36. First Non Repeating Char - 5 kyu - O(n*m)");
                 Console.WriteLine("37. Categorize New Member - 7 kyu - O(N)");
                 Console.WriteLine("38. Consecutive Digit Constraints - 5 kyu - O(n) ");
+                Console.WriteLine("39. Convert Number to Reversed Array - 8 kyu - O (N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -269,6 +270,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Consecutive Digit Constraints");
                         Console.WriteLine("Input: 3");
                         Console.WriteLine($"Resultado: {ConsecutiveDigitConstraints.NumberOfNumbers(3)}");
+                        break;
+                    case "39":
+                        Console.WriteLine("Executando: Convert Number to Array");
+                        Console.WriteLine("Input: 7351264");
+                        Console.WriteLine($"Resultado: {string.Join(", ",ConvertNumberToReversedArray.Digitize(7351264))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
