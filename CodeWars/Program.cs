@@ -54,6 +54,7 @@ namespace CodeWars
                 Console.WriteLine("39. Convert Number to Reversed Array - 8 kyu - O (N)");
                 Console.WriteLine("40. Mumbling - 7 kyu - O(N)");
                 Console.WriteLine("41. Mean Square Error - 5 kyu - O(N)");
+                Console.WriteLine("42. Pascal´s Diagonals - 5 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -287,6 +288,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Mean Square Error");
                         Console.WriteLine("Input: new int[] { 1, 2, 3 }, new int[] {4, 5, 6}");
                         Console.WriteLine($"Resultado: {string.Join("",MeanSquareError.Solution(new int[] { 1, 2, 3 }, new int[] {4, 5, 6}))}");
+                        break;
+                    case "42":
+                        Console.WriteLine("Executando: Pascal´s Diagonals");
+                        Console.WriteLine("Input: 6, 6");
+                        Console.WriteLine($"Resultado: {string.Join("",PascalDiagonals.GenerateDiagonal(6,6))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
