@@ -55,6 +55,7 @@ namespace CodeWars
                 Console.WriteLine("40. Mumbling - 7 kyu - O(N)");
                 Console.WriteLine("41. Mean Square Error - 5 kyu - O(N)");
                 Console.WriteLine("42. Pascal´s Diagonals - 5 kyu - O(N)");
+                Console.WriteLine("43. Grashopper - Check for factor - 8 kyu - O(1)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -293,6 +294,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Pascal´s Diagonals");
                         Console.WriteLine("Input: 6, 6");
                         Console.WriteLine($"Resultado: {string.Join("",PascalDiagonals.GenerateDiagonal(6,6))}");
+                        break;
+                    case "43":
+                        Console.WriteLine("Executando: Grasshopper ");
+                        Console.WriteLine("Input: 7, 2 ");
+                        Console.WriteLine($"Resultado: {string.Join("", GrashopperCheckForFactor.CheckForFactor(7, 2))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
