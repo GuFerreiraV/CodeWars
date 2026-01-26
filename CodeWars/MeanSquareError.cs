@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Mean Square Error - 5 kyu - 
+/// Mean Square Error - 5 kyu - O(N)
 /// Complete the function that
 
 /// accepts two integer arrays of equal length
