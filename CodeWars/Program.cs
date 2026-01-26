@@ -56,6 +56,7 @@ namespace CodeWars
                 Console.WriteLine("41. Mean Square Error - 5 kyu - O(N)");
                 Console.WriteLine("42. Pascal´s Diagonals - 5 kyu - O(N)");
                 Console.WriteLine("43. Grashopper - Check for factor - 8 kyu - O(1)");
+                Console.WriteLine("44. Domain Name Validator - 5 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -299,6 +300,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Grasshopper ");
                         Console.WriteLine("Input: 7, 2 ");
                         Console.WriteLine($"Resultado: {string.Join("", GrashopperCheckForFactor.CheckForFactor(7, 2))}");
+                        break;
+                    case "44":
+                        Console.WriteLine("Executando: Domain Name Validator");
+                        Console.WriteLine("Input: mňau.cz");
+                        Console.WriteLine($"Resultado: {string.Join("", DomainNameValidator.validate("mňau.cz"))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
