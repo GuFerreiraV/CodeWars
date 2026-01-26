@@ -57,6 +57,7 @@ namespace CodeWars
                 Console.WriteLine("42. Pascal´s Diagonals - 5 kyu - O(N)");
                 Console.WriteLine("43. Grashopper - Check for factor - 8 kyu - O(1)");
                 Console.WriteLine("44. Domain Name Validator - 5 kyu - O(N)");
+                Console.WriteLine("45. Array Diff - 6 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -305,6 +306,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Domain Name Validator");
                         Console.WriteLine("Input: mňau.cz");
                         Console.WriteLine($"Resultado: {string.Join("", DomainNameValidator.validate("mňau.cz"))}");
+                        break;
+                    case "45":
+                        Console.WriteLine("Executando: Array Diff");
+                        Console.WriteLine("Input: 1° array [1,2,3,4,5] || 2° array [4, 5, 6, 7]");
+                        Console.WriteLine($"Resultado: {string.Join(" ", ArrayDiff.ArrayDiffFunction(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 6, 7 }))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
