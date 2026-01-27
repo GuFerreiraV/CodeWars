@@ -59,6 +59,7 @@ namespace CodeWars
                 Console.WriteLine("44. Domain Name Validator - 5 kyu - O(N)");
                 Console.WriteLine("45. Array Diff - 6 kyu - O(N)");
                 Console.WriteLine("46. Invert Values - 8 kyu - O(N)");
+                Console.WriteLine("47. Twice As Old - 8 kyu - O(1)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -317,6 +318,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Invert Values");
                         Console.WriteLine("Input: Array [1,-2,3,-4,8]");
                         Console.WriteLine($"Resultado: {string.Join(" ", InvertValues.InvertValuess(new int[] { 1, -2, 3, -4, 8 }))}");
+                        break;
+                    case "47":
+                        Console.WriteLine("Executando: Twice As Old");
+                        Console.WriteLine("Input: 60, 20");
+                        Console.WriteLine($"Resultado: {string.Join(" ", TwiceAsOld.TwiceAsOlds(60, 20))}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
