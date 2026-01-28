@@ -61,6 +61,7 @@ namespace CodeWars
                 Console.WriteLine("46. Invert Values - 8 kyu - O(N)");
                 Console.WriteLine("47. Twice As Old - 8 kyu - O(1)");
                 Console.WriteLine("48. Ookkk Language - 5 kyu - O(N)");
+                Console.WriteLine("49. Duplicate Encoder - 6 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -330,6 +331,11 @@ namespace CodeWars
                         Console.WriteLine("Input: Ok, Ook, Ooo!");
                         Console.WriteLine($"Resultado: {Ookkk.OkkOokOo("Ok, Ook, Ooo!")}");
                         break;
+                    case "49":
+                        Console.WriteLine("Executando: Duplicate Encoder");
+                        Console.WriteLine("Input: Sass");
+                        Console.WriteLine($"Resultado: {DuplicateEncoder.DuplicateEncode("Sass")}");
+                        break;    
                     case "0":
                         Console.WriteLine("Saindo...");
                         return;
