@@ -60,6 +60,7 @@ namespace CodeWars
                 Console.WriteLine("45. Array Diff - 6 kyu - O(N)");
                 Console.WriteLine("46. Invert Values - 8 kyu - O(N)");
                 Console.WriteLine("47. Twice As Old - 8 kyu - O(1)");
+                Console.WriteLine("48. Ookkk Language - 5 kyu - O(N)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine(" 0. Sair");
                 Console.WriteLine("-------------------------------------------------");
@@ -323,6 +324,11 @@ namespace CodeWars
                         Console.WriteLine("Executando: Twice As Old");
                         Console.WriteLine("Input: 60, 20");
                         Console.WriteLine($"Resultado: {string.Join(" ", TwiceAsOld.TwiceAsOlds(60, 20))}");
+                        break;
+                    case "48":
+                        Console.WriteLine("Executando: Ookkk Language");
+                        Console.WriteLine("Input: Ok, Ook, Ooo!");
+                        Console.WriteLine($"Resultado: {Ookkk.OkkOokOo("Ok, Ook, Ooo!")}");
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
