@@ -1,6 +1,6 @@
 /// <summary> 
 /// 
-/// Ookkk Language - 5 kyu - 
+/// Ookkk Language - 5 kyu - O(N)
 /// 
 /// We've got a message from the Librarian. 
 /// As usual there're many o and k in it and, as all codewarriors don't know "Ook" language we need that you translate this message.
